@@ -12,14 +12,25 @@
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
 
-    <!-- FIX: Force bullets ONLY for Academic Projects -->
     <style>
+      /* Academic Projects */
       #about ul {
         list-style: disc !important;
         padding-left: 20px !important;
         margin-left: 0 !important;
       }
       #about li {
+        margin-bottom: 10px;
+      }
+
+      /* Work Experience */
+      #work .work-bullets {
+        list-style: disc !important;
+        padding-left: 40px !important;
+        margin: 10px 0 0 0 !important;
+      }
+      #work .work-bullets li {
+        display: list-item !important;
         margin-bottom: 10px;
       }
     </style>
@@ -130,178 +141,176 @@
         <article id="work">
           <h2 class="major" style="text-align: center">Work Experience</h2>
 
-          <ul style="list-style-type: none; padding: 0">
-            <div style="margin-bottom: 20px">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                "
-              >
-                <h3 style="margin: 0; font-size: 1.2em">
-                  Website Developer Associate
-                </h3>
-                <p style="margin: 0; font-size: 1em">
-                  June 2024 – December 2025
-                </p>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  margin-bottom: 10px;
-                "
-              >
-                <h4 style="margin: 0; font-size: 1em">Pace University</h4>
-                <p style="margin: 0; font-size: 1em">New York</p>
-              </div>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+          <!-- Website Developer Associate -->
+          <div style="margin-bottom: 25px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+              "
+            >
+              <h3 style="margin: 0; font-size: 1.2em">
+                Website Developer Associate
+              </h3>
+              <p style="margin: 0; font-size: 1em">June 2024 – December 2025</p>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <h4 style="margin: 0; font-size: 1em">Pace University</h4>
+              <p style="margin: 0; font-size: 1em">New York</p>
+            </div>
+            <ul class="work-bullets">
+              <li>
                 Developed & maintained a Virtual Career Center Platform using
                 Wordpress, enhancing the user experience for 13k+ students
                 through improved UI design, streamlined content workflows &
                 regular link validation checks to ensure reliability &
                 accessibility.
               </li>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+              <li>
                 Conducted job market data analysis in Excel & Power BI,
                 developing Interactive dashboards to highlight skill alignment
                 trends & providing actionable insights for academic reporting &
                 strategic financial planning.
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
 
-          <ul style="list-style-type: none; padding: 0">
-            <div style="margin-bottom: 20px">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                "
-              >
-                <h3 style="margin: 0; font-size: 1.2em">
-                  Assistant Manager - Android Developer
-                </h3>
-                <p style="margin: 0; font-size: 1em">
-                  September 2022 – January 2024
-                </p>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  margin-bottom: 10px;
-                "
-              >
-                <h4 style="margin: 0; font-size: 1em">Jio Platforms Ltd</h4>
-                <p style="margin: 0; font-size: 1em">Mumbai, India</p>
-              </div>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+          <!-- Assistant Manager - Android Developer -->
+          <div style="margin-bottom: 25px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+              "
+            >
+              <h3 style="margin: 0; font-size: 1.2em">
+                Assistant Manager - Android Developer
+              </h3>
+              <p style="margin: 0; font-size: 1em">
+                September 2022 – January 2024
+              </p>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <h4 style="margin: 0; font-size: 1em">Jio Platforms Ltd</h4>
+              <p style="margin: 0; font-size: 1em">Mumbai, India</p>
+            </div>
+            <ul class="work-bullets">
+              <li>
                 Developed 2 government document signing projects using Android
                 Studio, enabling secure document signing & ID access via OTP,
                 face detection, & fingerprint verification, designing UI using
                 XML & MVVM architecture.
               </li>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+              <li>
                 Designed app UI using XML, MVVM, implementing various views &
                 layouts while integrating APIs with AsyncTask & Retrofit
                 library.
               </li>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+              <li>
                 Integrated APIs to optimize user experience, resolving bugs
                 based on QA test cases to ensure application reliability.
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
 
-          <ul style="list-style-type: none; padding: 0">
-            <div style="margin-bottom: 20px">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                "
-              >
-                <h3 style="margin: 0; font-size: 1.2em">
-                  Python Developer Intern
-                </h3>
-                <p style="margin: 0; font-size: 1em">May 2020 – August 2020</p>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  margin-bottom: 10px;
-                "
-              >
-                <h4 style="margin: 0; font-size: 1em">
-                  Globalsoft Infosystems
-                </h4>
-                <p style="margin: 0; font-size: 1em">Mumbai, India</p>
-              </div>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+          <!-- Python Developer Intern -->
+          <div style="margin-bottom: 25px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+              "
+            >
+              <h3 style="margin: 0; font-size: 1.2em">
+                Python Developer Intern
+              </h3>
+              <p style="margin: 0; font-size: 1em">May 2020 – August 2020</p>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <h4 style="margin: 0; font-size: 1em">Globalsoft Infosystems</h4>
+              <p style="margin: 0; font-size: 1em">Mumbai, India</p>
+            </div>
+            <ul class="work-bullets">
+              <li>
                 Analyzed dataset of GIS points using Pandas, cleaning and
                 transforming the data to reveal trends & employing NumPy for
                 efficient calculations, visualizing data with Matplotlib.
               </li>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+              <li>
                 Delivered insights to enhance decision-making for Jio's planning
                 team.
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
 
-          <ul style="list-style-type: none; padding: 0">
-            <div style="margin-bottom: 20px">
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                "
-              >
-                <h3 style="margin: 0; font-size: 1.2em">
-                  Android Developer Intern
-                </h3>
-                <p style="margin: 0; font-size: 1em">
-                  December 2019 – January 2020
-                </p>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  flex-wrap: wrap;
-                  align-items: center;
-                  margin-bottom: 10px;
-                "
-              >
-                <h4 style="margin: 0; font-size: 1em">Reliance Infocomm Ltd</h4>
-                <p style="margin: 0; font-size: 1em">Mumbai, India</p>
-              </div>
-              <li style="margin-left: 20px; margin-bottom: 10px">
+          <!-- Android Developer Intern -->
+          <div style="margin-bottom: 10px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+              "
+            >
+              <h3 style="margin: 0; font-size: 1.2em">
+                Android Developer Intern
+              </h3>
+              <p style="margin: 0; font-size: 1em">
+                December 2019 – January 2020
+              </p>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <h4 style="margin: 0; font-size: 1em">Reliance Infocomm Ltd</h4>
+              <p style="margin: 0; font-size: 1em">Mumbai, India</p>
+            </div>
+            <ul class="work-bullets">
+              <li>
                 Designed Android application UI in Android Studio using XML,
                 implementing layouts such as Constraint, Relative, Grid, &
                 Linear for optimal adaptability across devices.
               </li>
-              <li style="margin-left: 20px; margin-bottom: 10px">
-                Developed functionalities with Java.
-              </li>
-            </div>
-          </ul>
+              <li>Developed functionalities with Java.</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Skills -->
