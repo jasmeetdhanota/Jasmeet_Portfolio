@@ -11,7 +11,20 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
+
+    <!-- FIX: Force bullets ONLY for Academic Projects -->
+    <style>
+      #about ul {
+        list-style: disc !important;
+        padding-left: 20px !important;
+        margin-left: 0 !important;
+      }
+      #about li {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
+
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
@@ -65,7 +78,7 @@
               innovative projects in the tech industry.
             </p>
             <a
-              href="assets/JasmeetKaurDhanota_Resume_2025.pdf"
+              href="assets/JasmeetKaurDhanota_Resume.pdf"
               style="text-decoration: none"
               ><button style="text-decoration: none">View Resume</button></a
             >
@@ -90,10 +103,9 @@
 
       <!-- Main -->
       <div id="main">
-        <!-- Intro -->
+        <!-- Education -->
         <article id="Education">
           <h2 class="major">Education</h2>
-          <!-- <span class="image main"><img src="images/pic01.jpg" alt="" /></span> -->
           <ul>
             <h3>Master of Science, Major in Information Systems</h3>
             <li>University: Pace University at New York City</li>
@@ -292,7 +304,7 @@
           </ul>
         </article>
 
-        <!-- Skills-->
+        <!-- Skills -->
         <article id="skills">
           <h2 class="major">Skills</h2>
           <h3>Programming Languages:</h3>
@@ -308,32 +320,46 @@
           <p>HTML&CSS | Bootstrap | JavaScript | JSON | React |</p>
         </article>
 
-        <!-- About -->
+        <!-- Academic Projects -->
         <article id="about">
           <h2 class="major">Academic Projects</h2>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               JPMorgan Chase Software Engineering Micro Internship
             </h3>
             <li>
-              Built and enhanced a Spring Boot microservice for a financial trading system, implementing business logic to process real-time trader updates and persist calculated balances using Java 17, Maven, REST APIs, and Apache Kafka.
+              Built and enhanced a Spring Boot microservice for a financial
+              trading system, implementing business logic to process real-time
+              trader updates and persist calculated balances using Java 17,
+              Maven, REST APIs, and Apache Kafka.
             </li>
             <li>
-              Validated system reliability by developing JUnit test cases, debugging build and dependency issues, and ensuring accurate event-driven data processing within a distributed microservices architecture.            
+              Validated system reliability by developing JUnit test cases,
+              debugging build and dependency issues, and ensuring accurate
+              event-driven data processing within a distributed microservices
+              architecture.
             </li>
           </ul>
-          <ul>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               Emotion Detection using LSTM RNN Model in TensorFlow/Keras
             </h3>
             <li>
-              Architected LSTM model in TensorFlow/Keras to detect emotions from text, extrapolating sentiments from CSV file of 40k+ data points, developing text preprocessing pipeline using Python & Pandas for model training.
+              Architected LSTM model in TensorFlow/Keras to detect emotions from
+              text, extrapolating sentiments from CSV file of 40k+ data points,
+              developing text preprocessing pipeline using Python & Pandas for
+              model training.
             </li>
             <li>
-             Evaluated model performance after achieving 30% accuracy rate, identifying need for additional layers to neural network to enhance output, documenting model workflow & recommendations for improved accuracy.
+              Evaluated model performance after achieving 30% accuracy rate,
+              identifying need for additional layers to neural network to
+              enhance output, documenting model workflow & recommendations for
+              improved accuracy.
+            </li>
           </ul>
-          <ul>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               Image Classifier Website
@@ -351,6 +377,7 @@
               images into model, achieving 92% accuracy.
             </li>
           </ul>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               JPMorgan Chase & Co. Software Engineering Lite Micro Internship
@@ -368,6 +395,7 @@
               conversions.
             </li>
           </ul>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               Hand Gesture-Based Sign Recognition System using Convolutional
@@ -383,6 +411,7 @@
               that achieved 95% accuracy.
             </li>
           </ul>
+
           <ul>
             <h3 style="margin-bottom: 0; display: inline-block">
               Sensor Fusion and Imu
@@ -400,6 +429,7 @@
           </ul>
         </article>
 
+        <!-- Certificates -->
         <article id="Certificates">
           <h2 class="major">Certificates</h2>
           <div
@@ -475,13 +505,13 @@
         emailjs.init("hiL0xZHjRrCPK3iu3");
       })();
     </script>
+
     <script type="text/javascript">
       document
         .getElementById("contact-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          // Get the form data
           const name = document.getElementById("name").value;
           const email = document.getElementById("email").value;
           const message =
@@ -490,7 +520,6 @@
             "\n\n" +
             document.getElementById("message").value;
 
-          // Use Email.js to send the email
           emailjs
             .send("service_8iyoqik", "template_1tgvtti", {
               from_name: name,
@@ -510,6 +539,7 @@
               }
             );
         });
+
       function showInformation() {
         document.getElementById("information-box").style.display = "block";
       }
