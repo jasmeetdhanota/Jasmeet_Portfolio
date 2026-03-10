@@ -493,23 +493,28 @@
             <a href="assets/Certificates/JPmorgencertificate.pdf">View</a>
           </div>
         </article>
-
+        <!-- service_w6dqicn -->
         <!-- Contact -->
         <article id="contact">
           <h2 class="major">Contact</h2>
-          <form method="post" action="#" id="contact-form">
+          <form id="contact-form">
             <div class="fields">
               <div class="field half">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" required />
               </div>
               <div class="field half">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
               </div>
               <div class="field">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4"></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
               </div>
             </div>
             <ul class="actions">
@@ -560,11 +565,11 @@
             document.getElementById("message").value;
 
           emailjs
-            .send("service_8iyoqik", "template_1tgvtti", {
+            .send("service_w6dqicn", "template_1tgvtti", {
               from_name: name,
               from_email: email,
               message: message,
-              to_email: "dhanotajasmeet5@gmail.com",
+              to_email: "jdhanotausa@gmail.com",
             })
             .then(
               function (response) {
