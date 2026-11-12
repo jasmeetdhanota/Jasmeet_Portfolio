@@ -8,9 +8,9 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 
     <style>
       /* Academic Projects bullets */
@@ -93,15 +93,12 @@
             <a
               href="assets/JasmeetKaurDhanota_Resume.pdf"
               style="text-decoration: none"
-              ><button style="text-decoration: none">View Resume</button></a
             >
-            <!-- <a
-              href="assets/JasmeetDhanota_CoverLetter.pdf"
-              style="text-decoration: none"
-              ><button style="text-decoration: none">Cover Letter</button></a
-            > -->
+              <button style="text-decoration: none">View Resume</button>
+            </a>
           </div>
         </div>
+
         <nav>
           <ul>
             <li><a href="#Education">Education</a></li>
@@ -143,7 +140,6 @@
         <article id="work">
           <h2 class="major" style="text-align: center">Work Experience</h2>
 
-          <!-- Website Developer Associate -->
           <div style="margin-bottom: 25px">
             <div
               style="
@@ -189,7 +185,6 @@
             </ul>
           </div>
 
-          <!-- Assistant Manager - Android Developer -->
           <div style="margin-bottom: 25px">
             <div
               style="
@@ -240,7 +235,6 @@
             </ul>
           </div>
 
-          <!-- Python Developer Intern -->
           <div style="margin-bottom: 25px">
             <div
               style="
@@ -282,7 +276,6 @@
             </ul>
           </div>
 
-          <!-- Android Developer Intern -->
           <div style="margin-bottom: 10px">
             <div
               style="
@@ -479,8 +472,8 @@
               max-width: 500px;
             "
           >
-            <span>1. Job Certificate</span>
-            <a href="assets/Certificates/JasmeetDhanota_JobLetter.pdf">View</a>
+            <!-- <span>1. Job Certificate</span>
+            <a href="assets/Certificates/JasmeetDhanota_JobLetter.pdf">View</a> -->
             <span>2. Internship Certificate</span>
             <a href="assets/Certificates/JasmeetDhanota_InternshipLetter.pdf"
               >View</a
@@ -489,11 +482,13 @@
             <a href="assets/Certificates/WebCertificate.pdf">View</a>
             <span>4. Python Masterclass</span>
             <a href="assets/Certificates/PythonCertificate.pdf">View</a>
-            <span>5. MicroInternship Certificate</span>
-            <a href="assets/Certificates/JPmorgencertificate.pdf">View</a>
+            <span>5. MicroInternship Certificates</span>
+            <a href="assets/Certificates/Microinternship_Certificates.pdf"
+              >View</a
+            >
           </div>
         </article>
-        <!-- service_w6dqicn -->
+
         <!-- Contact -->
         <article id="contact">
           <h2 class="major">Contact</h2>
@@ -542,55 +537,48 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 
-    <script type="text/javascript">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
       (function () {
-        emailjs.init("hiL0xZHjRrCPK3iu3");
+        emailjs.init({
+          publicKey: "5AMH-J2HhrhxlG0R4",
+        });
       })();
-    </script>
 
-    <script type="text/javascript">
       document
         .getElementById("contact-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message =
-            "From: " +
-            email +
-            "\n\n" +
-            document.getElementById("message").value;
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const userMessage = document.getElementById("message").value.trim();
+
+          const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: userMessage,
+            to_email: "jdhanotausa@gmail.com",
+          };
 
           emailjs
-            .send("service_89v91cu", "template_1tgvtti", {
-              from_name: name,
-              from_email: email,
-              message: message,
-              to_email: "jdhanotausa@gmail.com",
+            .send("service_xpfyv5t", "template_v4ie4hj", templateParams)
+            .then(function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Your message was sent successfully!");
+              document.getElementById("contact-form").reset();
             })
-            .then(
-              function (response) {
-                alert("Your message was sent successfully!");
-                document.getElementById("contact-form").reset();
-              },
-              function (error) {
-                alert(
-                  "An error occurred while sending the message: " + error.text,
-                );
-              },
-            );
+            .catch(function (error) {
+              console.error("EmailJS Error:", error);
+              alert(
+                "An error occurred while sending the message: " +
+                  (error.text || error.message || "Unknown error"),
+              );
+            });
         });
-
-      function showInformation() {
-        document.getElementById("information-box").style.display = "block";
-      }
-
-      function hideInformation() {
-        document.getElementById("information-box").style.display = "none";
-      }
     </script>
   </body>
 </html>
